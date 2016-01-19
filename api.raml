@@ -1,0 +1,19 @@
+#%RAML 0.8
+title: eduResource
+version: v0.6
+baseUri: http://esp-lifecycle.beta.web.sdp.101.com/{version}
+/helloWorld:
+  get:
+    protocols: [HTTP]
+    securedBy:
+    queryParameters:
+      limit:
+        default: (0,20)
+    responses:
+      200:
+        body:
+          application/json:
+            example: |
+              {
+                "message" : "Hello World"
+              }
